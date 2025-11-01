@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic des Ouvrages d'Art Ferroviaire</title>
+    <!-- Lien vers votre fichier CSS pour le style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien vers Font Awesome pour les icônes (via CDN pour la simplicité) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DIAGNOSTIC DES OUVRAGES D'ART FERROVIAIRE</h1>
+            <p>Créé par REZZAK BRAHIM</p>
+        </header>
+
+        <main>
+            <div class="left-panel">
+                <section class="info-section">
+                    <h2>INFORMATIONS SUR L'OUVRAGE</h2>
+                    <label for="nomOuvrage">Nom de l'Ouvrage :</label>
+                    <input type="text" id="nomOuvrage" placeholder="Ex: Viaduc de Millau">
+
+                    <label for="pkFerroviaire">PK Ferroviaire :</label>
+                    <input type="text" id="pkFerroviaire" placeholder="Ex: PK 123.456">
+                </section>
+
+                <section class="photo-management">
+                    <h2>ANALYSE ILLIMITÉE & GRATUITE PAR IA</h2>
+                    <div class="buttons-row">
+                        <!-- Bouton pour prendre des photos (nécessitera du JavaScript pour accéder à la caméra) -->
+                        <button id="takePhoto"><i class="fas fa-camera"></i> Prendre des Photos</button>
+                        
+                        <!-- Input type="file" caché pour l'importation de photos -->
+                        <input type="file" id="importPhotoInput" accept="image/*" multiple hidden>
+                        <!-- Bouton pour déclencher l'input file caché -->
+                        <button id="importPhoto"><i class="fas fa-cloud-upload-alt"></i> Importer les Photos</button>
+                        
+                        <!-- Bouton pour supprimer/choisir des photos (nécessitera du JavaScript pour gérer la sélection) -->
+                        <button id="deletePhoto"><i class="fas fa-trash-alt"></i> Supprimer / Choisir</button>
+                    </div>
+                    <div class="photo-previews">
+                        <!-- Les miniatures des photos importées s'afficheront ici via JavaScript -->
+                        <p>Vos photos apparaîtront ici.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-panel">
+                <div class="main-image-display">
+                    <!-- La grande image sélectionnée ou un placeholder s'affichera ici -->
+                    <p>Sélectionnez une photo pour l'agrandir.</p>
+                </div>
+                <div class="action-buttons">
+                    <!-- Bouton pour lancer l'analyse par IA -->
+                    <button id="analyzeIA"><i class="fas fa-brain"></i> Analyser les pathologies et désordres (IA)</button>
+                    <!-- Bouton pour exporter le rapport PDF -->
+                    <button id="exportPDF"><i class="fas fa-file-pdf"></i> Importer en PDF avec analyses</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Lien vers votre fichier JavaScript pour l'interactivité -->
+    <script src="script.js"></script>
+</body>
+</html>
